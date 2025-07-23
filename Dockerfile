@@ -15,7 +15,7 @@ FROM nginx:alpine
 WORKDIR /usr/share/nginx/html
 RUN rm -rf ./*
 
-COPY --from=builder /app/dist/NewsWebApp .
+COPY --from=builder /app/dist/routing-final/browser .
 
 # Copy custom nginx config for Angular routing
 COPY nginx.conf /etc/nginx/conf.d/default.conf
